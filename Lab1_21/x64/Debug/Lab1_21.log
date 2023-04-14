@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\senya\OneDrive\Рабочий стол\c++ Анисимов\Lab1_21\main.cpp(25,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\senya\OneDrive\Рабочий стол\c++ Анисимов\Lab1_21\main.cpp(92): warning C4715: search: значение возвращается не при всех путях выполнения
+  Lab1_21.vcxproj -> C:\Users\senya\OneDrive\Рабочий стол\c++ Анисимов\Lab1_21\x64\Debug\Lab1_21.exe
