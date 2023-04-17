@@ -1,1 +1,2 @@
 C:\Users\senya\OneDrive\Рабочий стол\c++ Анисимов\Lab3_21\x64\Debug\Lab3_21.exe
+C:\Users\senya\OneDrive\Рабочий стол\repository1\cpp2semak\Lab3_21\x64\Debug\Lab3_21.exe
