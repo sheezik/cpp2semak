@@ -17,10 +17,14 @@ Lab1_21 OOП
 	тест :
 */
 #include <iostream>
-#include <iomanip>
-#include <locale>
-#include <ctime>
 #include "queue.h"
 
-
 using namespace std;
+
+int main() 
+{
+	Queue a(2);
+	a.setNum(0, 1);
+	a.setNum(1, 2);
+	a.print();
+}
