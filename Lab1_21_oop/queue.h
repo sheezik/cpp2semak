@@ -1,25 +1,36 @@
 #pragma once
-#include <iostream>
-class Queue 
+//#include <iostream>
+//#include <fstream>
+//#include <Windows.h>
+using namespace std;
+
+class Queue
 {
 private:
-	int n;
-	int *a;
+	int size; // size of the array
+	int* arr;
 
 public:
-	Queue(int n);
-	Queue();
-	~Queue();
+	Queue(); // default constructor
 
-	int setNum(int index,int t);
-	void addQueue(int index,int num);
-	int getQueue();
-	int getNum(int index);
-	int getSize();
-	void delQueue(int index);
-	void print();
-	const Queue& operator= (const Queue& right);
-	friend std::ostream& operator<<(std::ostream& cout, Queue*& a);
-	friend std::istream& operator>>(std::istream& cin, Queue& a);
-	void copy(int* a);
+	Queue(int size, int el...); // universal inizialize constructor
+
+	Queue(int size); // the main constructor
+
+	Queue(const Queue& other); // copy constructor
+
+	int getSize();  // get the size of the array
+
+	void pushNum(int num);
+
+	void popNum();
+
+	const Queue& operator = (const Queue& other); // redefining the assignment operation
+
+
+	~Queue(); // destructor for clearing the memory allocated for the array 
+
+	friend ostream& operator << (ostream& os, Queue& a);
+
+
 };

@@ -1,0 +1,2 @@
+C:\Users\senya\OneDrive\Рабочий стол\c++ Анисимов\Project1\x64\Debug\Project1.exe
+C:\Users\senya\OneDrive\Рабочий стол\repository1\cpp2semak\Lab1_21_oop\x64\Debug\Project1.exe
