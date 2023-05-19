@@ -10,13 +10,15 @@ using namespace std;
 // default constructor
 Queue::Queue() {
 	this->size = 0;
-	this->arr = new int[this->size];
+	this->arr = new int[this->capasity];
 }
 
 // universal inizialize constructor
 Queue::Queue(int size, int el...) {
 	this->size = size;
-	this->arr = new int[this->size];
+	if (size > capasity)
+		this->capasity = this->capasity + 10;
+	this->arr = new int[this->capasity];
 
 	va_list arg_list;
 	va_start(arg_list, size);
@@ -27,10 +29,10 @@ Queue::Queue(int size, int el...) {
 }
 
 // the main constructor
-Queue::Queue(int size) {
-	this->size = size;
-	this->arr = new int[this->size];
-}
+//Queue::Queue(int size) {
+//	this->size = size;
+//	this->arr = new int[this->capasity];
+//}
 
 // copy constructor
 Queue::Queue(const Queue& other) {
@@ -50,27 +52,36 @@ int Queue::getSize() {
 
 void Queue::pushNum(int num)
 {
-	int* newArr = new int[this->size + 1];
+	if (size >= capasity)
+	{
+		int* newArr = new int[this->capasity + 10];
 
-	for (int i = 0; i < this->size; i++) {
-		newArr[i] = this->arr[i];
+		for (int i = 0; i < this->size; i++) {
+			newArr[i] = this->arr[i];
+		}
+		delete[] this->arr;
+		this->arr = newArr;
+		this->arr[this->size] = num;
+		this->capasity = this->capasity + 10;
+		this->size = this->size + 1;
 	}
-	delete[] this->arr;
-	this->arr = newArr;
-	this->arr[this->size] = num;
-	this->size = this->size + 1;
+	else
+	{
+		this->arr[this->size] = num;
+		this->size = this->size + 1;
+	}
+	
 }
 
-void Queue::popNum()
+void Queue::erraseNum()
 {
-	int* newArr = new int[this->size - 1];
-
-	for (int i = 1; i < this->size; i++) {
-		newArr[i - 1] = this->arr[i];
+	if (size > 0)
+	{
+		for (int i = 1; i < this->size; i++) {
+			this->arr[i - 1] = this->arr[i];
+		}
+		this->size = this->size - 1;
 	}
-	delete[] this->arr;
-	this->arr = newArr;
-	this->size = this->size - 1;
 }
 
 

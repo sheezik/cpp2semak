@@ -7,6 +7,7 @@ using namespace std;
 class Queue
 {
 private:
+	int capasity=10;
 	int size; // size of the array
 	int* arr;
 
@@ -23,7 +24,7 @@ public:
 
 	void pushNum(int num);
 
-	void popNum();
+	void erraseNum();
 
 	const Queue& operator = (const Queue& other); // redefining the assignment operation
 

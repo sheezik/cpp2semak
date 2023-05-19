@@ -24,20 +24,21 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	Queue a(3, 2,22,2);
+	Queue a(9, 1,2,3,4,5,6,7,8,9);
 	cout << "Очередь а : ";
 	cout << a;
-	Queue b(1);
-	cout << "Очередь b : ";
-	cout << b;
 	Queue c;
 	cout << "Очередь c : ";
 	cout << c;
 	c.pushNum(4);
 	cout << "Добавить элем в конец очереди с : ";
 	cout << c;
-	a.popNum();
+	a.erraseNum();
 	cout << "Удалить первый элем очереди a : ";
 	cout << a;
+	a.pushNum(10);
+	cout << "Добавить элем в конец очереди a : ";
+	cout << a;
+
 
 }
